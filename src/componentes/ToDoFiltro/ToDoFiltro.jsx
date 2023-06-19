@@ -16,7 +16,7 @@ export const ToDoFiltro = ({
 ) => {
   return (
     <>
-      <FiltroContainer>
+      <FiltroContainer >
         <ItemsRestantes total={total} />
         <FiltroContainerBotones>
           <FiltroBoton action={() => mostrarTodo()} active={filtroActivo} filter='Todos' />
@@ -24,7 +24,7 @@ export const ToDoFiltro = ({
           <FiltroBoton action={() => mostrarCompletados()} active={filtroActivo} filter='Completos' />
         </FiltroContainerBotones>
 
-        <button onClick={() => manejoBorradoCompletos()} className="text-gray-400 hover:text-white cursor-pointer transition-all duration-300 ease-in">
+        <button onClick={() => manejoBorradoCompletos()} className="text-gray-700 hover:text-white cursor-pointer transition-all duration-300 ease-in">
           Borrar Completados
         </button>
       </FiltroContainer>

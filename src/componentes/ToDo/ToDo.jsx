@@ -5,19 +5,19 @@ export const ToDo = ({ toDo, manejoSetCompletado, manejoBorrado, onClickActualiz
 
   return (
     <>
-      <div className="flex items-center justify-between p-4 bg-gray-700 border-b border-solid border-gray-600 ">
+      <div className="flex items-center justify-between p-5 bg-cyan-200 text-gray-700 border-y  border-cyan-300 ">
         <div className="flex items-center">
           {completado ? (
             <div
               onClick={() => manejoSetCompletado(id)}
-              className=" bg-green-700 p-1 rounded-full cursor-pointer"
+              className=" bg-green-700 p-1  rounded-full cursor-pointer"
             >
               <img className="h-4 w-4" src="/check-icon.svg" alt="Check icon" />
             </div>
           ) : (
             <span
               onClick={() => manejoSetCompletado(id)}
-              className="border border-solid border-gray-400 rounded-full p-3 cursor-pointer"
+              className="border border-solid border-gray-700 rounded-full p-3 cursor-pointer"
             ></span>
           )}
 

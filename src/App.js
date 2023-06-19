@@ -6,17 +6,18 @@ import { ToDoLista } from "./componentes/ToDoLista/ToDoLista";
 import toDoArray from "./componentes/ToDoInput/toDoArray";
 import PageGlobal from "./componentes/PageGlobal";
 
-
 function App() {
-  
-
   return (
-    <div className="bg-gray-800 min-h-screen h-full text-gray-200 flex items-center justify-center py-20 px-10">
-      <div className="container flex flex-col max-w-xl">
-        <Titulo />
-        <PageGlobal/>
+    <>
+      <div className="bg-cyan-200 min-h-screen w-full h-full text-gray-700 flex flex-col items-center justify-center py-2 px-10">
+        <div className="flex flex-col items-center justify-center ">
+          <Titulo />
+        </div>
+        <div className="container flex flex-col max-w-xl max-h-full">
+          <PageGlobal />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
