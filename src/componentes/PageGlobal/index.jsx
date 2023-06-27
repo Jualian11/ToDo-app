@@ -68,9 +68,7 @@ const PageGlobal = () => {
       setTitleBu("Crear");
     }
   };
-  // console.log("stateTemp", stateTemp);
 
-  // data tempo`ral listar
   const [filtroActivo, setFiltroActivo] = React.useState("todos");
   const [toDosFiltrados, setToDosFiltrados] = React.useState(infoTodos);
 
@@ -79,16 +77,10 @@ const PageGlobal = () => {
   };
 
   const manejoBorrado = (id) => {
-    // se va a hacer lo mismo que aqui pero uzando el localstorage
-    // const listaActualizada = infoTodos.filter((toDo) => toDo.id !== id);
-    // setInfoTodos(listaActualizada);
     eliminarLocalStorage(id, infoTodos, setInfoTodos);
   };
 
   const manejoBorradoCompletos = () => {
-    // se hace lo mismo pero se actualizar en localstorage
-    // const listaActualizada = infoTodos.filter((toDo) => !toDo.completado);
-    // setInfoTodos(listaActualizada);
     eliminarCompletadosLocalStorage(infoTodos, setInfoTodos);
   };
 
@@ -119,7 +111,7 @@ const PageGlobal = () => {
       setToDosFiltrados(toDosCompletos);
     }
   }, [filtroActivo, infoTodos]);
-  // findata tempo`ral listar
+
   return (
     <>
       <ToDoInput
