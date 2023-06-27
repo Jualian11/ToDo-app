@@ -1,24 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useLocalStorage } from "../useLocalStorage/useLocalStorage";
-import { crearLocalstorage } from "../../hooks/useLocalStorage";
-import { todo } from "../../estados";
+// const dataTemporal = { id: 1, titulo: "tarea prueba", completado: false };
 
-const dataTemporal = { id: 1, titulo: 'tarea prueba', completado: false }
-
-export const ToDoInput = ({ anadirToDo, onChangeInput, submit, stateTemp }) => {
-  // const [titulo, setTitulo] = useState("");
-  // console.log(titulo)
-  // const [titulo, setTitulo] = useLocalStorage("titulo", "");
-
-  
-
-  // const manejarToDo = (e) => {
-  //   if (e.key.toLowerCase() === "enter") {
-  //     anadirToDo(titulo);
-  //     setTitulo("");
-  //   }
-  // };
-
+export const ToDoInput = ({
+  onChangeInput,
+  submit,
+  stateTemp,
+  titleBu,
+  onClickCancelar,
+}) => {
   return (
     <>
       <div className="mt-6 relative">
@@ -33,7 +21,21 @@ export const ToDoInput = ({ anadirToDo, onChangeInput, submit, stateTemp }) => {
           onChange={onChangeInput}
           // onKeyDown={(e) => manejarToDo(e)}
         />
-        <button onClick={submit} className=" w-full py-4 bg-cyan-400 rounded-xl outline-none shadow-lg shadow-cyan-500 hover:shadow-cyan-600" >Crear</button>
+        <button
+          onClick={submit}
+          className=" w-full py-4 bg-cyan-400 rounded-xl outline-none shadow-lg shadow-cyan-500 hover:shadow-cyan-600"
+        >
+          {titleBu}
+        </button>{" "}
+        <br />
+        {titleBu === "Actualizar" && (
+          <button
+            onClick={onClickCancelar}
+            className=" w-full my-4 py-4 bg-cyan-400 rounded-xl outline-none shadow-lg shadow-cyan-500 hover:shadow-cyan-600"
+          >
+            Cancelar
+          </button>
+        )}
       </div>
     </>
   );

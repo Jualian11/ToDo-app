@@ -23,8 +23,7 @@ export const ToDo = ({ toDo, manejoSetCompletado, manejoBorrado, onClickActualiz
 
           <p className={"pl-3 " + (completado && "line-through")}> {titulo} </p>
         </div>
-        <button onClick={(e) => onClickActualizar(id)} >Actualizar</button>
-        <button>Eliminar</button>
+        <button onClick={(e) => onClickActualizar(toDo)} >Actualizar</button>
         <img
           onClick={() => manejoBorrado(id)}
           src="/close-icon.svg"
